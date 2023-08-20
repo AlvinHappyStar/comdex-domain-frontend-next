@@ -45,7 +45,8 @@ function PriceCard(props: PriceProps) {
         alignItems: "center",
         img: {
           width: { lg: "90px", md: "72px", sm: "72px", xs: "72px" },
-          background: "#101820",
+          // background: "#101820",
+          background: "radial-gradient(at left bottom, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8))",
           borderRadius: "50%",
         },
       }}
@@ -75,7 +76,7 @@ function PriceCard(props: PriceProps) {
             fontSize: "16px",
             fontWeight: "700",
             background:
-              "linear-gradient(to right, #0085FA 0%, #009FFB 50%, #00e7fd 100%)",
+              "#e81f3f",
             "-webkit-background-clip": "text",
             "-webkit-text-fill-color": "transparent",
           }}
@@ -88,7 +89,7 @@ function PriceCard(props: PriceProps) {
               fontSize: "26px",
               fontWeight: "700",
               background:
-                "linear-gradient(to right, #0085FA 0%, #009FFB 50%, #00e7fd 100%)",
+                "#e81f3f",
               "-webkit-background-clip": "text",
               "-webkit-text-fill-color": "transparent",
             }}

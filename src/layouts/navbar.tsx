@@ -167,7 +167,7 @@ export default function Navbar() {
                   width: "30px",
                   height: "30px",
                   backgroundImage: `url(${walletAddress
-                    ? "https://cryptologos.cc/logos/injective-inj-logo.svg?v=025"
+                    ? "./logo192.png"
                     : "./keplr128.png"
                     })`,
                   backgroundRepeat: "no-repeat",
