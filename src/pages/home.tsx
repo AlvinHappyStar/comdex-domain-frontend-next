@@ -93,7 +93,7 @@ function PriceCard(props: PriceProps) {
               "-webkit-text-fill-color": "transparent",
             }}
           >
-            Total: {props.total} INJ
+            Total: {props.total} CMDX
           </Typography>}
       </Box>
     </Box>

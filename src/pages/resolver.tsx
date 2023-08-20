@@ -126,7 +126,7 @@ const Home: React.FC<Props> = () => {
         position: "absolute"
       }}>
         <Typography variant="h4">
-          Injective Name Service Resolver
+          Comdex Name Service Resolver
         </Typography>
 
         <Box
