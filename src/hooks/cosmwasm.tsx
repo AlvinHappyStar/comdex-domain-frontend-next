@@ -223,14 +223,14 @@ export const useSigningCosmWasmClient = (): ISigningCosmWasmClientContext => {
         getBalances();
 
         if (result && result.transactionHash) {
-          const response: JsonObject = await signingClient.getTx(
+          const response: JsonObject = await signingClient?.getTx(
             result.transactionHash
           );
           let log_json = JSON.parse(response.rawLog);
           let wasm_events = log_json[0].events[2].attributes;
 
           if (wasm_events[3].value === duration) {
-            toast.success("Register success:" + result.txHash, toastOptions);
+            toast.success("Register success:" + result.transactionHash, toastOptions);
             await fetchDomains(walletAddress);
             console.log("************Hash result", result);
           }
@@ -273,17 +273,15 @@ export const useSigningCosmWasmClient = (): ISigningCosmWasmClientContext => {
         setLoading(false);
         getBalances();
 
-        console.log("st", nativeBalance);
-
         if (result && result.transactionHash) {
-          const response: JsonObject = await signingClient.getTx(
+          const response: JsonObject = await signingClient?.getTx(
             result.transactionHash
           );
           let log_json = JSON.parse(response.rawLog);
           let wasm_events = log_json[0].events[5].attributes;
 
           if (wasm_events[3].value === name) {
-            toast.success("Register success:" + result.txHash, toastOptions);
+            toast.success("Register success:" + result.transactionHash, toastOptions);
             await fetchDomains(walletAddress);
             await fetchAllDomains();
             console.log("************Hash result", result);
@@ -307,7 +305,7 @@ export const useSigningCosmWasmClient = (): ISigningCosmWasmClientContext => {
     console.log(name);
     setLoading(true);
     try {
-      const response: JsonObject = await signingClient.queryContractSmart(
+      const response: JsonObject = await signingClient?.queryContractSmart(
         PUBLIC_CONTRACT_ADDRESS,
         {
           resolve_record: {
@@ -336,7 +334,7 @@ export const useSigningCosmWasmClient = (): ISigningCosmWasmClientContext => {
     setLoading(true);
     try {
 
-      const response: JsonObject = await signingClient.queryContractSmart(
+      const response: JsonObject = await signingClient?.queryContractSmart(
         PUBLIC_CONTRACT_ADDRESS,
         {
           resolve_all_addr: {
@@ -368,7 +366,7 @@ export const useSigningCosmWasmClient = (): ISigningCosmWasmClientContext => {
     setLoading(true);
     try {
 
-      const response: JsonObject = await signingClient.queryContractSmart(
+      const response: JsonObject = await signingClient?.queryContractSmart(
         PUBLIC_CONTRACT_ADDRESS,
         {
           resolve_addr: {
