@@ -70,7 +70,7 @@ export default function Navbar() {
             display: { sm: "flex", xs: "none" },
             height: "100%",
             padding: { sm: "16px 0", xs: "20px 0" },
-            img: {
+            img: {              
               height: "100%",
             },
             cursor: "pointer"

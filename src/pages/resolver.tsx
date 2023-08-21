@@ -83,7 +83,7 @@ const Home: React.FC<Props> = () => {
       setResolverOwner(owner);
       return;
     }
-    else if (resolverAddress.slice(-4) != ".cmdx") {
+    else if (resolverAddress.slice(-5) != ".cmdx") {
       toast.warning("Domain is required matching with xxx.cmdx");
       setResolverOwner(owner);
       return;
